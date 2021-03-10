@@ -11,7 +11,8 @@ h3 {
 }
 
 body {
-    background-image: url(/resources/images/background.jpg);
+    color: #cccccc;
+    background-image: url('/resources/images/background.jpg');
    }
 
 nav{
