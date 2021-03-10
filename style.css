@@ -12,6 +12,8 @@ h3 {
 
 body {
     background-color: #cccccc;
+    background-attachment: fixed;
+    background-image: url(/resources/images/background.jpg);
    }
 
 nav{
