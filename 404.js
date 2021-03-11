@@ -53,6 +53,7 @@ var messages = [
     '\"Existence is all about being brain-damaged.\"',
     '\"Your fear of death means nothing to anyone.\"',
     '\"Touch a legal clown.\"',
+    '\"Before time comes time.\"',
     '\"Don\'t be angry, just ask your parents.\"',
     'Tarball was here',
     'It\'s pointless to keep on gonig, there\'s nothing left here.',
@@ -69,6 +70,9 @@ var messages = [
     'go home',
     'go to https://trblwlf.tk/ , it\'s a way better website',
     'banana',
+    'This is an employee only area',
+    "...",
+    "Get oUT",
 
 ]
 function newMessage() {

@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+#corner {
+    font-family: 'Poppins', sans-serif;
+    color: #cccccc;
+    font-size: 13px;
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+}
+
+
 .corner {
     font-family: 'Poppins', sans-serif;
     color: #cccccc;
