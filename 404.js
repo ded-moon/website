@@ -34,7 +34,7 @@ var messages = [
     'These T-Shirts were tested on animals. They didn\'t fit.',
     '1986',
     'Oh f*ck',
-    'A lot of people are furryies, they just don\'t know it yet. ',
+    'A lot of people are furries, they just don\'t know it yet. ',
     'YIFF at 16K RESOLUTION?? - HOLY $H!T',
     'Hexinity is a cutie',
     'Tarball is a cutie',
