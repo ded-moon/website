@@ -13,6 +13,7 @@ var messages = [
     'The page you\'re trying to reach no longer exists',
     'Why are you here?',
     'Where are we?',
+    '?',
     'Lost, lost, lost',
     '(:',
     '):',
@@ -76,6 +77,9 @@ var messages = [
     "Get oUT",
     "Are you lost?",
     "Do you nead help?",
+    "\"ear blind\"",
+    'Oh no, not again!',
+    'What did you break this time?',
 
 ]
 function newMessage() {
