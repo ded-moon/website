@@ -10,6 +10,15 @@
     color: #43B0F1;
 }
 
+#social1 {
+    color: #cccccc;
+    font-size: 30px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    font-family: 'Shippori Mincho B1', serif;
+}
+
 #corner {
     font-family: 'Poppins', sans-serif;
     color: #cccccc;
