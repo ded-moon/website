@@ -4,6 +4,21 @@
     box-sizing: border-box;
 }
 
+.corner {
+    font-family: 'Poppins', sans-serif;
+    color: #cccccc;
+    font-size: 13px;
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+}
+
+.error404 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 70px;
+    color: #cccccc;
+}
+
 .test {
     font-family: 'Poppins', sans-serif;
     text-align: center;
