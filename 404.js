@@ -74,6 +74,8 @@ var messages = [
     'This is an employee only area',
     "...",
     "Get oUT",
+    "Are you lost?",
+    "Do you nead help?",
 
 ]
 function newMessage() {
