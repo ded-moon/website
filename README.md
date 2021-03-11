@@ -1,84 +1,92 @@
  Ea quae salvator et redemptor noster dominus deus Iesus Christus, altissimi patris filius, per suos sanctos apostolos Petrum et Paulum, interveniente patre nostro Silvestrio summo pontifice et universali papa, mirabiliter operari dignatus est, liquida enarratione per huius nostrae imperialis institutionis paginam ad agnitionem omnium populorum in universo orbe terrarum nostra studuit propagare mansuetissima serenitas. Primum quidem fidem nostram, quam a praelato beatissimo patre et oratore nostro Silvestrio universali pontifice edocti sumus, intima cordis confessione ad instruendas omnium vestrum mentes proferentes et ita demum misericordiam dei super nos diffusam annuntiantes.
 
+.
 
+.
 
+.
 
+.
 
+don't read.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
+.
 
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
+.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.
 
 
 
