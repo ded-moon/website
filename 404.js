@@ -34,6 +34,7 @@ var messages = [
     'Get become.',
     'These T-Shirts were tested on animals. They didn\'t fit.',
     '1986',
+    "1991",
     'Oh f*ck',
     'A lot of people are furries, they just don\'t know it yet. ',
     'YIFF at 16K RESOLUTION?? - HOLY $H!T',
@@ -71,6 +72,7 @@ var messages = [
     '476',
     'go home',
     'go to https://trblwlf.tk/ , it\'s a way better website',
+    'go to: https://trblwlf.tk/ , it\'s a way better website',
     'banana',
     'This is an employee only area',
     "...",
@@ -80,6 +82,17 @@ var messages = [
     "\"ear blind\"",
     'Oh no, not again!',
     'What did you break this time?',
+    "ừ̸̧̛̛̘̠͙̤̪͈̣͔̪͈͚͔̥̝̩͉̖̪͕͖͓͌̎͗̓̀̓͐̔͂̈́̈̀͐̋͗͐̍̄̈́̓̈͒̽̄̊̅͆̐̊͛̋̀̓̀͒̏͗́̓̾͛̒̋̾́̅̔̅͑̆̂͌͘̕͘̚͜ͅh̸̡̢̨̡̢̧̨̡̦͓͙̘͙͓̪͕̘͙̭͖͓̳̩͙̯̤͇͓̱͇̮̣̫̭̟̣̗̝̪̱̩͉̬̻̦̖̳̝͇̞̬̠̼̥̗̺̠̱͈͚̮̝̱̬̤̼͎̜̭͕̙͈̩̭̦̳͈̻̳̤̤̻̠̖͇̼̗͖̳̝̗̙̳̘̟̜̱̭̦̺̤͍̓̔̀̂͋̀̊͗͐̈̊͋͊̊͌̈͋̂͛̾̏̊̀͒͂̍̉̌͆́̑̓̇̎̒̿̾̇͑͑͆̿̈͆͂̏͗̉͂̿̄͆̃͑͛͌͆̓̈́̆͛̇̃̋͊̐̂̂̓̆͛̋̊̈́̂̋͒͘̕̚͘͝͝͝ͅ ̵̡̨̛͍͖͕͇̜͇̫̠̜̫͚͂̑̅̀̒̈́̒̉̏̇̾͑̋̋̏̑͑̍̓̒̈́̓́̚̚͜͝͝͝ͅờ̷̢̡̡̡̨̢̛̛̻̼̼̣̞̩̝̪̫̜̗̟̜̮͍̜̭̺͔͉̺͔̤̰̲̜͓͉̘̙͍͇̭̭̤̱̺̪̗̜̙͖͎͓̫̤̙͈̳̻͒̓́̈͆̂͊̎̈̊̃̅̇͗̆̎͒͑̀͂͊̿̎͒̂̌̉̈̍̋̏̌̿͆̽̀̽͊̐̊̃̊̾̅̍̈́͐̇͆̋̉̃̈́̍̓̽̏͛͋̑̈́̆͋̐̄̿̓̏̈̃̾̒͂̎̄̃̆̓̔̀͌͗̅̈́͒̓̎͛́̀̌͘̕̕͜͜͝͠͠͠͝͝͝͝͝͠͝͝͝ͅͅͅḩ̸̡̛̛̫͔̪̙͈̯̺̣̫͚̦̖̦̭̖̫̦̘̦̰͉̜̺̙̯̝̺̟̝̠͉͓̱̭̖̮͚̯̩̝̲͚͓͚̹̱̮̳̗̖̳̱̥̮͇̻̈́̋̏͗̓̂̃̀̀͑̀͋̈́̎̍̎̔̀́̍̾̍̋̾̂̓̑̌̈́́́͋͒̏̌̐̈́̾̔̉̅͒̃̊̊́̃̋̎̈́̽͆̆́͆͒̓̊̇̉̋͐̿͒̌̏̐̉̈́̾͒͒̑̀̒͆́́̐͒͊͆̓̔̈́̎̊̉̋̀͒̍̀͌́́͒̆͆̃͂̋̕͘̚̕͘͝͠͝͠͠͠͠",
+    "Are you ok?",
+    '\"it\'s not out of the question that you might have a very minor case of serious brain damage.\"',
+    "I\'m not who you think i am.",
+    "b̶͓̃",
+    'I\'m a faileure...',
+    'How can i make you feel better?',
+    '\“From the moment we are born, we begin to die.\”',
+    'error 404, error mesage not found',
+    "Where are you going?",
+    "there\'s no way back",
 
 ]
 function newMessage() {

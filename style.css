@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+p {
+    text-align: center;
+}
+
 #messsageDisplay {
     font-family: 'Shippori Mincho B1', serif;
     font-size: 20px;
@@ -28,6 +32,12 @@
     left: 8px;
 }
 
+#a1 {
+    font-family: 'Poppins', sans-serif;
+    color: #cccccc;
+    text-align: center;
+    font-size: 30px;
+}
 
 .corner {
     font-family: 'Poppins', sans-serif;
@@ -50,6 +60,17 @@
     text-decoration: none;
     color: #cccccc;
     font-size: 40px;
+    text-decoration-line: none;
+    flex-direction: column;
+    display: flex;
+}
+
+#link2 {
+    font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    color: #43B0F1;
+    font-size: 30px;
     text-decoration-line: none;
     flex-direction: column;
     display: flex;
