@@ -93,7 +93,8 @@ var messages = [
     'error 404, error mesage not found',
     "Where are you going?",
     "there\'s no way back",
-
+    "Welcome to The Void",
+    "foxes are cute",
 ]
 function newMessage() {
         var randomNumber = Math.floor(Math.random() * (messages.length));
