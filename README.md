@@ -1,1 +1,1 @@
-You can use my code if you want, but if you use a big part of it, please be nice and give some credit. You don't have to do it, but it's a nice gesture. It doesn't have to be on the main page, if you ever just mention me in some obscure part of your website i will be happy.
+This website is crap, idk why you would even look trough it. I guess you can use it if you want. You can even give me credit, even tho i don't deserve it. (also, if you have any sugestions or if i made any mistakes please contact me so i can fix them)
