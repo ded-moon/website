@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 
-p {
-    text-align: center;
+body {
+    background-color: cadetblue;
 }
 
 #messsageDisplay {
@@ -15,12 +15,12 @@ p {
 }
 
 #social1 {
-    color: #cccccc;
-    font-size: 30px;
-    text-align: center;
-    flex-direction: column;
-    display: flex;
+    color: #FEFAE0;
+    font-size: 25px;
+    flex-direction:row ;
     font-family: 'Shippori Mincho B1', serif;
+    margin-left: 100px;
+    margin-right: 25px;
 }
 
 #corner {
@@ -82,10 +82,7 @@ h3 {
     color:teal;
 }
 
-body {
-    background-image: url('/resources/images/background.jpg');
-   }
-
+/* nav or smothing idk i don't remember */
 nav{
     display: flex;
     justify-content: space-around;
@@ -181,4 +178,16 @@ nav{
 }
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* early.html */
+
+#tilte {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width :200px;
+    height:200px;
+    margin-left:-100px;
+    margin-top:-100px;
 }
