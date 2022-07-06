@@ -11,7 +11,7 @@ body {
 #messsageDisplay {
     font-family: 'Shippori Mincho B1', serif;
     font-size: 20px;
-    color: #43B0F1;
+    color: #ffffffd3;
 }
 
 #social1 {
@@ -51,7 +51,17 @@ body {
 .error404 {
     font-family: 'Poppins', sans-serif;
     font-size: 70px;
+    color: #c0c0bf;
+}
+
+#homelink {
+    text-decoration: none;
     color: #cccccc;
+    font-size: 17px;
+    text-decoration-line: none;
+    position:fixed;
+    bottom: 5px;
+    right: 10px;
 }
 
 #link {
@@ -69,7 +79,7 @@ body {
     font-family: 'Poppins', sans-serif;
 
     text-decoration: none;
-    color: #43B0F1;
+    color: #cccccc;
     font-size: 30px;
     text-decoration-line: none;
     flex-direction: column;
@@ -80,6 +90,14 @@ h3 {
     font-family: 'Redressed', cursive;
     font-size: 60px;
     color:teal;
+    position: relative;
+    left:0.5%;
+}
+h2 {
+    font-size: 45px;
+    color:rgba(0, 109, 109, 0.897);
+    position: relative;
+    left:1%;
 }
 
 /* nav or smothing idk i don't remember */
