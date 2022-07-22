@@ -6,6 +6,7 @@
 
 body {
     background-color: cadetblue;
+    overflow: hidden; /* Hide scrollbars */
 }
 
 #messsageDisplay {
@@ -23,15 +24,6 @@ body {
     margin-right: 25px;
 }
 
-#corner {
-    font-family: 'Poppins', sans-serif;
-    color: #cccccc;
-    font-size: 13px;
-    position: fixed;
-    bottom: 8px;
-    left: 8px;
-}
-
 #a1 {
     font-family: 'Poppins', sans-serif;
     color: #cccccc;
@@ -39,7 +31,7 @@ body {
     font-size: 30px;
 }
 
-.corner {
+#corner {
     font-family: 'Poppins', sans-serif;
     color: #cccccc;
     font-size: 13px;

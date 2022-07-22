@@ -24,3 +24,12 @@
     font-weight: 900;
 }
 
+.corner {
+    font-family: 'Poppins', sans-serif;
+    color: #ad4343;
+    font-size: 13px;
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+}
+
