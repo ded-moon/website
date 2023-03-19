@@ -9,13 +9,36 @@ body {
     overflow: hidden; /* Hide scrollbars */
 }
 
+#time {
+    /* Clock in Home */
+    background-color: #4edada;
+    width: 35%;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-family: 'Georgia', sans-serif;
+    font-size: 55px;
+    text-align: center;
+    color: rgba(44, 44, 44, 0.900);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 #messsageDisplay {
     font-family: 'Shippori Mincho B1', serif;
     font-size: 20px;
     color: #ffffffd3;
 }
 
-#social1 {
+#welcomeTitle {
+    font-size: 150px;
+    font-family: 'Shippori Mincho B1', serif;
+    color:white;
+    position: relative;
+    left:4%;
+}
+
+/* Normal Paragraph */
+.normal_p {
     color: #FEFAE0;
     font-size: 25px;
     flex-direction:row ;
@@ -24,11 +47,29 @@ body {
     margin-right: 25px;
 }
 
-#a1 {
-    font-family: 'Poppins', sans-serif;
-    color: #cccccc;
-    text-align: center;
+.social_p{
+    color: #FEFAE0;
     font-size: 30px;
+    flex-direction:row ;
+    font-family: 'Shippori Mincho B1', serif;
+    margin-left: 100px;
+    margin-right: 25px;
+}
+
+#p_link {
+    color: #FEFAE0;
+    font-size: 25px;
+    flex-direction:row ;
+    font-family: 'Shippori Mincho B1', serif;
+    text-decoration-line: none;
+}
+
+#p_link_social {
+    color: #FEFAE0;
+    font-size: 30px;
+    flex-direction:row ;
+    font-family: 'Shippori Mincho B1', serif;
+    text-decoration-line: none;
 }
 
 #corner {
@@ -92,7 +133,7 @@ h2 {
     left:1%;
 }
 
-/* nav or smothing idk i don't remember */
+/* nav bar or smothing idk i don't remember */
 nav{
     display: flex;
     justify-content: space-around;

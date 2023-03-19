@@ -22,6 +22,14 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data-10-year-range.min.js"></script>
+        <script>
+            setInterval(() => {
+              document.getElementById('time').innerHTML = moment.tz('Europe/Bucharest').format('dddd, MMMM Do   HH:mm (hh:mm A) z')
+            }, 300)
+        </script>
+
         <title>Home</title>
     </head>
     <body>
@@ -54,8 +62,12 @@
         </nav>
         <div>
             <h3>ded_moon</h3>
-            <a id="homelink" style="text-decoration: none;" href="/time/">What time is it?</a>
+            <a id="homelink" style="text-decoration: none;" href="/time/">What's the weather like?</a>
         </div>
+
+        <br>
+        <p id="time"></p>
+
         <div id="corner">
             <script>
               document.write(`@ded_moon 2020 - ${new Date().getFullYear()}`);
