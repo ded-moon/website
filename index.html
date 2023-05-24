@@ -9,9 +9,8 @@
         <meta property="og:description" content="Random mf on the internet." />
         <meta name="author" content="ded_moon" />
 
-        <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="./resources/favicon.ico">
         <link rel="stylesheet" href=/style.css>
-        <script scr="/app.js"></script>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap" rel="stylesheet">
@@ -32,45 +31,26 @@
 
         <title>Home</title>
     </head>
+
     <body>
-        <nav>
-            <div class="logo">
-                <h4>The Nav™</h4>
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/about/">About Me</a>
-                </li>
-                <li>
-                    <a href="/posts/">Posts</a>
-                </li>
-                <li>
-                    <a href="/social/">Social</a>
-                </li>
-                <li>
-                    <a href="/other/">Other</a>
-                </li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-        <div>
-            <h3>ded_moon</h3>
-            <a id="homelink" style="text-decoration: none;" href="/time/">What's the weather like?</a>
+        <div class="header_box"> <h id="header">ded_moon</h> </div>
+
+        <div class="topnav">
+            <a href="/">Home</a>
+            <a href="/about/">About me</a>
+            <a href="/posts/">Posts</a>
+            <a href="/social/">Social</a>
+            <a href="#">Archive</a>
+            <a href="/other/">Other</a>
         </div>
 
-        <br>
-        <p id="time"></p>
+        <br> <br> <br> <br> <br>
 
+        <p id="time"></p>
         <div id="corner">
             <script>
               document.write(`@ded_moon 2020 - ${new Date().getFullYear()}`);
             </script>
         </div>
     </body>
+</html>

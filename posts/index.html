@@ -11,7 +11,6 @@
 
         <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
         <link rel="stylesheet" href=/style.css>
-        <script scr="/app.js"></script>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap" rel="stylesheet">
@@ -22,60 +21,34 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data-10-year-range.min.js"></script>
+
         <title>Posts</title>
     </head>
+
     <body>
-        <nav>
-            <div class="logo">
-                <h4>The Nav™</h4>
-            </div>
-            <ul class="nav-links">
-                <li>
-                    <a href="/index.html">Home</a>
-                </li>
-                <li>
-                    <a href="/about/">About Me</a>
-                </li>
-                <li>
-                    <a href="/posts/index.html">Posts</a>
-                </li>
-                <li>
-                    <a href="/social/">Social</a>
-                </li>
-                <li>
-                    <a href="/other/">Other</a>
-                </li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-        <div>
-            <h3>Posts</h3>
-            <a id="homelink" style="text-decoration: none;" href="/resources/template.html">Template</a>
+        <div class="header_box"> <h id="header">Posts</h> </div>
+
+        <div class="topnav">
+            <a href="/">Home</a>
+            <a href="/about/">About me</a>
+            <a href="/posts/">Posts</a>
+            <a href="/social/">Social</a>
+            <a href="#">Archive</a>
+            <a href="/other/">Other</a>
         </div>
-        <div id="link">
-            <ul>
-                <li>
-                    <a id="link" style="text-decoration: none;" href="/posts/programs/">Cool Programs</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a id="link" style="text-decoration: none;" href="/posts/Projects/">Projects</a>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <a id="link" style="text-decoration: none;" href="/posts/Archive/">Archive</a>
-                </li>
-            </ul>
+
+        <div class="normal_p">
+            <p><a href="#"id="link">Projects</a></p>
+            <p><a href="/posts/ai_quotes/"id="link">Ai Quote Gallery</a></p>
+            <p><a href="#"id="link">Archive Links</a></p>
         </div>
+
         <div id="corner">
             <script>
               document.write(`@ded_moon 2020 - ${new Date().getFullYear()}`);
             </script>
         </div>
     </body>
+</html>
