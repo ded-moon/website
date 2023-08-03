@@ -1,6 +1,8 @@
 body {
     margin: 0;
     background-color: cadetblue;
+    overflow-x: hidden;
+    
 }
 
 /* fonts & text */
@@ -8,7 +10,11 @@ body {
         /* standart font & color */
         color: #FEFAE0;
         font-size: 25px;
-        margin-left: 10px;
+    }
+    .small_p {
+        /* standart font & color */
+        color: #FEFAE0;
+        font-size: 10px;
     }
 /* end of fonts */
 
@@ -27,6 +33,9 @@ body {
         text-decoration: none;
         font-size: 25px;
         color: #FEFAE0;
+    }
+    #p_link:hover{
+        color: #493d3d;
     }
 
     #link{
