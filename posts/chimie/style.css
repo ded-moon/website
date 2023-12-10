@@ -1,0 +1,86 @@
+.column {
+    position:absolute;
+    background-color: #e9e9e9;
+    display: block;
+    top: 15px;
+    left: 15%;
+    height: auto;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-family: 'Domine', serif;
+    font-size: 60px;
+    background-color: #dad9d9;
+}
+h2 {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Domine', serif;
+    font-size: 40px;
+}
+h3 {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Domine', serif;
+    font-size: 30px;
+}
+p{
+    margin: 25px;
+    font-size:large;
+    font-family: 'Georgia', sans-serif;
+}
+
+#img_right{
+    float: right;
+    height: 400px;
+}
+#img_formula{
+    max-height: 150px;
+}
+
+body {
+    background-image: url(/resources/images/chemistry-background-5665.jpg);
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#corner {
+    /* used for launch year */
+    font-family: 'Poppins', sans-serif;
+    color: #cccccc;
+    font-size: 13px;
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+}
+
+@media screen and (max-width: 700px) {
+    .column {
+        width: 100%; 
+        top: 1%;
+        left: 0%;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h2 {
+        font-size: 15px;
+    }
+    p{
+        margin: 7px;
+    }
+    #img_right{
+        float:none;
+        height:auto;
+        width: 400px;
+    }
+    #img_formula{
+        max-height: auto;
+        max-width: 400px;
+    }
+}
