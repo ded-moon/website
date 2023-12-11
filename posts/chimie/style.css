@@ -56,10 +56,27 @@ body {
     left: 8px;
 }
 
+@media screen and (max-width: 1700px) {
+    #img_right{
+        float: none;
+    }
+    #img_formula{
+        max-height: auto;
+    }
+}
+@media screen and (max-width: 1350px) {
+    #img_right{
+        height: 300px;
+    }
+    #img_formula{
+        max-height: auto;
+        max-width: 600px;
+    }
+}
 @media screen and (max-width: 700px) {
     .column {
         width: 100%; 
-        top: 1%;
+        top: 4%;
         left: 0%;
     }
     h1 {
@@ -68,14 +85,13 @@ body {
     h2 {
         font-size: 35px;
     }
-    h2 {
-        font-size: 15px;
+    h3 {
+        font-size: 23px;
     }
     p{
         margin: 7px;
     }
     #img_right{
-        float:none;
         height:auto;
         width: 400px;
     }
