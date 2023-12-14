@@ -35,6 +35,7 @@ p{
 #img_right{
     float: right;
     height: 400px;
+    padding: 16px;
 }
 #img_formula{
     max-height: 150px;
