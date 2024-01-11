@@ -1,0 +1,125 @@
+#cnv {
+    background-color: #cccccc;
+}
+
+.column {
+    position:absolute;
+    backdrop-filter: blur(20px);
+
+    display: block;
+    top: 15px;
+    left: 15%;
+    height: auto;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-family: 'Domine', serif;
+    font-size: 60px;
+    background-color: #5624a7;
+}
+h2 {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Domine', serif;
+    font-size: 40px;
+    color:aliceblue
+}
+h3 {
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Domine', serif;
+    font-size: 25px;
+    color:aliceblue
+}
+p{
+    margin: 25px;
+    font-size:large;
+    font-family: 'Georgia', sans-serif;
+    color:aliceblue
+}
+a {
+    color:aliceblue
+}
+
+
+
+#img_center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#gif{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+#img_formula{
+    max-height: 150px;
+}
+
+body {
+    background-image: url(/resources/images/fractal-background.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#corner {
+    /* used for launch year */
+    font-family: 'Poppins', sans-serif;
+    color: #cccccc;
+    font-size: 13px;
+    position: fixed;
+    bottom: 8px;
+    left: 8px;
+}
+
+@media screen and (max-width: 1700px) {
+    #img_right{
+        float: none;
+    }
+    #img_formula{
+        max-height: auto;
+    }
+}
+@media screen and (max-width: 1350px) {
+    #img_right{
+        height: 300px;
+    }
+    #img_formula{
+        max-height: auto;
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .column {
+        width: 100%; 
+        top: 4%;
+        left: 0%;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 23px;
+    }
+    p{
+        margin: 7px;
+    }
+    #img_right{
+        height:auto;
+        width: 400px;
+    }
+    #img_formula{
+        max-height: auto;
+        max-width: 400px;
+    }
+}
