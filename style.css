@@ -29,12 +29,7 @@ body {
         right: 10px; */
     }
     #home_link:hover {
-        /* Links - change color on hover */
-        background-color: #cbdbe0;
-        color: rgb(46, 46, 46);
-        padding: 8px 20px;
-        border: none; /* Remove button border */
-        border-radius: 50px;
+        color: #493d3d;
     } 
 
     #p_link{
