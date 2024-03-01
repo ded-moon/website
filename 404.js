@@ -46,7 +46,7 @@ var messages = [
     'uhh',
     'uh',
     '1453',
-    '476',
+    '7 ate 9',
     'go home',
     'go to https://trblwlf.tk/ , it\'s a way better website',
     'go to: https://trblwlf.tk/ , it\'s a way better website',
