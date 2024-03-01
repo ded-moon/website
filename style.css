@@ -24,10 +24,18 @@ body {
         text-decoration: none;
         color: #cccccc;
         font-size: 30px;
-        position:fixed;
+        /* position:fixed;
         bottom: 5px;
-        right: 10px;
+        right: 10px; */
     }
+    #home_link:hover {
+        /* Links - change color on hover */
+        background-color: #cbdbe0;
+        color: rgb(46, 46, 46);
+        padding: 8px 20px;
+        border: none; /* Remove button border */
+        border-radius: 50px;
+    } 
 
     #p_link{
         text-decoration: none;
@@ -61,13 +69,21 @@ body {
 .error404 {
     font-family: 'Poppins', sans-serif;
     font-size: 70px;
-    color: #c0c0bf;
+    color: #870101;
 }
 #messsageDisplay {
     /* 404 random message */
     font-family: 'Shippori Mincho B1', serif;
     font-size: 20px;
     color: #ffffffd3;
+}
+.line {
+    /* used for 404 page */
+    position: relative;
+    height: 4px; 
+    width: 370px; 
+    background-color: rgb(84, 84, 84); 
+    border-radius: 5px;
 }
 
 #corner {
