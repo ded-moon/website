@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self' https://api.open-meteo.com https://ipapi.co;
+        object-src 'none';">
+
+    <!-- For search engines -->
+    <link rel="canonical" href="https://dedmoon.com/home">
+    <meta name="keywords" content="ded_moon, dedmoon, SpicyVoltage, robotics, programming, hackathons, CTF, engineering, romanian tech, ">
+    <!-- For internet explorer XD -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dedmoon.com/home">
+    <meta property="og:site_name" content="dedmoon.com">
+    <meta property="og:title" content="ded_moon">
+    <meta name="description" content="ded_moon's presonal website">
+    <meta property="og:description" content="ded_moon's presonal website" />
+    <meta name="theme-color" content="#068172">
+    <meta name="author" content="ded_moon" />
+
+    <link rel="stylesheet" href=/resources/crt.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
+    <title>Home</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 15px;
+            background-color: #151515;
+            font-family: monospace;
+            font-size: 16px;
+            line-height: 1.4;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: #ffffff;
+        }
+
+        /* For paragraphs */
+        .vt323-regular {
+            font-family: "VT323", monospace;
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+        }
+        /* For headers */
+        .audiowide-regular {
+            font-family: "Audiowide", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        p1{
+            color: #ffffff;
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #151515;
+            color: white;
+            overflow-y: auto;
+            display: none;
+            z-index: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: 'VT323', monospace;
+        }
+
+
+        button {
+            margin-top: 20px;
+            background: transparent;
+            color: turquoise;
+            border: 1px solid turquoise;
+            padding: 5px 15px;
+            font-family: 'VT323', monospace;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .column {
+            /* Remove overflow: hidden */
+            border: 1px solid rgb(34, 160, 135);
+            box-shadow: 0 0 2px rgba(34,160,135,0.6),
+                        0 0 5px rgba(34,160,135,0.4),
+                        0 0 10px rgba(34,160,135,0.2);
+            padding: 10px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .left-column {
+            width: 40%;
+            min-width: 300px;
+            font-size: 15px;
+        }
+
+        .right-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .terminal-log {
+            flex-grow: 1;
+            max-height: 60vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        .terminal-input {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+        }
+
+        .terminal-input input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #ffffff;
+            color: #ffffff;
+            outline: none;
+            font-family: 'VT323', monospace;
+            font-size: 1em;
+            flex-grow: 1;
+            margin-left: 8px;
+        }
+        .cli-link {
+            color: turquoise;
+            text-decoration: none;
+        }
+        .cli-link:hover {
+            text-decoration: underline;
+        }
+        .cli-action-link {
+            color: turquoise;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .cli-action-link:hover {
+            text-decoration: underline;
+        }
+
+        #blinkOverlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/resources/pictures/stars.png');
+            background-size: cover;
+            background-repeat:no-repeat;
+            background-position: center;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 1;  
+            animation: none;
+        }
+
+        @keyframes blinkEffect {
+            0%, 100% { opacity: 0; }
+            10%, 30%, 50%, 70%, 90% { opacity: 1; }
+            20%, 40%, 60%, 80% { opacity: 0; }
+        }
+
+
+        input:focus {
+            box-shadow: 0 0 4px #ffffff;
+        }
+
+        @media (max-width: 780px) {
+            body {
+                font-size: 13px;
+                padding: 0px;
+            }
+            #cliForm {
+                display: none;
+             }
+            .left-column {
+                width: 100%;
+                min-width: 100px;
+            }
+            .right-column {
+                width: 100%;
+                min-width: 100px;
+            }
+        }
+        @media (max-width: 450px) {
+            body {
+                font-size: 10px;
+                padding: 0px;
+            }
+        }
+        @media (max-width: 350px) {
+            body {
+                font-size: 8px;
+                padding: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body class="crt">
+    <h1 class="audiowide-regular" style="color: beige;">Home</h1>
+    <p1 class="audiowide-regular" style="font-size: 20px; color:beige ;">VidraOs</p1>
+    <div class="row">
+        <div class="column left-column">
+            <center>
+                <pre style="color: rgb(34, 160, 135);"> 
+    ⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠈⠉⠙⠛⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀
+    ⠀⣴⣾⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀
+    ⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀
+    ⠻⣿⠀⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⡗⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣯⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠸⣿⡿⣿⣿⣿⣿⣿⣟⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⢻⣿⣿⣿⣿⣿⡿⣿⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣯⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⢸⣿⣿⣿⣿⡿⣿⣿⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⠛⣿⣿⡀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⢻⣿⡷⠀⠈⠿⣷⣄⣀⣀⣴⠆
+    ⠀⠀⠀⠀⠀⢠⣾⣿⠿⠷⠀⠀⠀⠙⠿⠿⠛⠁⠀
+                </pre>
+            </center>
+        </div>
+        <div class="column right-column">
+            <div id="terminalLog" class="terminal-log vt323-regular"></div>
+            <form id="cliForm" class="terminal-input vt323-regular" onsubmit="handleCommand(event)">
+                <span>&gt;_</span>
+                <input id="command" type="text" autocomplete="off" autofocus/>
+            </form>
+        
+            <!-- Put overlay INSIDE the terminal! -->
+            <div id="overlay" style="display: none;">
+                <div id="overlayContent"></div>
+                <div id="returnButtonContainer" style="margin-top: 20px; display: none;">
+                    <button onclick="closeOverlay()">[ RETURN ]</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div id="blinkOverlay"></div>
+
+    <script src="/resources/cli.js"></script>
+</body>
+</html>

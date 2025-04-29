@@ -1,31 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
-        <link rel="stylesheet" href=/style.css>
-        <title>Error</title>
-    </head>
-    <body onload="newMessage()">
-        <center>
-            <br>
-            <br>
-            <div class="error404" id="error404">Error 404</div>
-            <div class="line"></div>
-            <div id="messsageDisplay"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'unsafe-inline';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        object-src 'none';">
 
-            <script src="/404.js"></script>
-            <br><br>
-            <a id="home_link" style="text-decoration: none;" href="/index.html">Go Home</a>
-        </center>
-        <footer>
-            <div id="corner">
-                <script>
-                  document.write(`@ded_moon 2020 - ${new Date().getFullYear()}`);
-                </script>
-             </div>
-        </footer>
-    </body>
+    <!-- For search engines -->
+    <link rel="canonical" href="https://dedmoon.com/home">
+    <meta name="keywords" content="ded_moon, dedmoon, SpicyVoltage, robotics, programming, cybersecurity, hackathons, CTF, engineering, romanian tech, ">
+    <!-- For internet explorer XD -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dedmoon.com/home">
+    <meta property="og:site_name" content="dedmoon.com">
+    <meta property="og:title" content="ded_moon">
+    <meta name="description" content="ded_moon's presonal website">
+    <meta property="og:description" content="ded_moon's presonal website" />
+    <meta name="theme-color" content="#068172">
+    <meta name="author" content="ded_moon" />
+
+    <link rel="stylesheet" href=/resources/crt.css>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./resources/favicon.ico">
+    <title>404 Not Found</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 30px;
+            background-color: #0c0c0c;
+            color: #00FF00;
+            font-family: monospace;
+            font-size: 16px;
+            line-height: 1.4;
+            overflow: hidden;
+        }
+    
+        .cursor::after {
+          content: '▍';
+          display: inline-block;
+          animation: blink 1s step-end infinite;
+          margin-left: 5px;
+        }
+    
+        @keyframes blink {
+          50% { opacity: 0; }
+        } 
+    
+        a {
+          color: #00FF00;
+        }
+        pre {
+            white-space: pre-wrap;     /* allows wrapping */
+            word-break: break-word;    /* breaks words at boundary */
+            overflow-wrap: break-word; /* older browser support */
+        }
+
+
+        @media (max-width: 650px) {
+            body {
+                font-size: 13px;
+                padding: 0px;
+            }
+        }
+        @media (max-width: 450px) {
+            body {
+                font-size: 10px;
+                padding: 0px;
+            }
+        }
+        @media (max-width: 350px) {
+            body {
+                font-size: 8px;
+                padding: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body onload="newMessage()" class="crt">
+    <pre>
+    VidraOS Recovery Console 4.03Δ
+    --------------------------------------------------
+    > ERROR 404: Resource not found
+    > The requested file could not be located on this node.
+    > Please verify the path or return to the system shell.
+    
+    > Session ID: <span id="sessionID"></span>
+    > System log: /var/log/vidraos/404.err
+    > Timestamp: <span id="timestamp"></span>
+    
+    > sys/msg: <span id="messsageDisplay"></span>
+    --------------------------------------------------
+    [ <a href="/home">Press here to return to the main interface</a> ]<span class="cursor"></span>
+    </pre>
+    
+    <script>
+      document.getElementById("timestamp").textContent = new Date().toLocaleString();
+      if (window.location.pathname.includes("admin")) { //hehe
+        document.getElementById("messsageDisplay").textContent = "Admin access denied. Session information logged.";
+    }
+    </script>
+    <script src="/404.js"></script> 
+</body>
 </html>

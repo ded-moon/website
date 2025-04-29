@@ -1,56 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="description" content="Random mf on the internet.">
-        <meta name="theme-color" content="#00FFFF">
-        <meta property="og:description" content="Random mf on the internet." />
-        <meta name="author" content="ded_moon" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    object-src 'none';">
+    
+  <!-- For search engines -->
+  <link rel="canonical" href="https://dedmoon.com/home">
+  <meta name="keywords" content="ded_moon, dedmoon, SpicyVoltage, robotics, programming, hackathons, CTF, engineering, romanian tech, ">
+  <!-- For internet explorer XD -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <link rel="shortcut icon" type="image/x-icon" href="./resources/favicon.ico">
-        <link rel="stylesheet" href=/style.css>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dedmoon.com/home">
+  <meta property="og:site_name" content="dedmoon.com">
+  <meta property="og:title" content="ded_moon">
+  <meta name="description" content="ded_moon's presonal website">
+  <meta property="og:description" content="ded_moon's presonal website" />
+  <meta name="theme-color" content="#068172">
+  <meta name="author" content="ded_moon" />
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./resources/crt.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="./resources/favicon.ico">
+  <title>ded_moon</title>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+  <style>
+    #boot-container {
+      height: 100vh;
+      overflow-y: auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.26/moment-timezone-with-data-10-year-range.min.js"></script>
-        <script>
-            setInterval(() => {
-              document.getElementById('time').innerHTML = moment.tz('Europe/Bucharest').format('dddd, MMMM Do   HH:mm (hh:mm A) z')
-            }, 300)
-        </script>
+    body {
+      color: green;
+      font-family: monospace;
+      white-space: pre;
+      margin: 0;
+    }
 
-        <title>Home</title>
-    </head>
+    a{
+      color: white;
+    }
 
-    <body>
-        <div class="header_box"> <h id="header">ded_moon</h> </div>
+    .vt323-regular {
+      font-family: "VT323", monospace;
+      font-size: 18px;
+      font-style: normal;
+    }
 
-        <div class="topnav">
-            <a href="/">Home</a>
-            <a href="/about/">About me</a>
-            <a href="/posts/">Posts</a>
-            <a href="/social/">Social</a>
-            <a href="/archive/">Archive</a>
-            <a href="/other/">Other</a>
-        </div>
 
-        <br> <br> <br> <br> <br>
+    .hidden {
+      display: none;
+    }
 
-        <p id="time"></p>
-        <div id="corner">
-            <script>
-              document.write(`@ded_moon 2020 - ${new Date().getFullYear()}`);
-            </script>
-        </div>
-    </body>
+    .cursor::after {
+        content: '▍'; /* retro block cursor */
+        display: inline-block;
+        animation: blink 1s steps(1) infinite;
+        margin-left: 5px;
+    }
+
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .error {
+      color: red;
+    }
+
+    .blackout {
+      background-color: black;
+      color: black;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 0px;
+      }
+      .vt323-regular {
+        font-size: 17px;
+      }
+    }
+    @media (max-width: 450px) {
+      body {
+        padding: 0px;
+      }
+      .vt323-regular {
+        font-size: 15px;
+      }
+    }
+    @media (max-width: 350px) {
+      body {
+        padding: 0px;
+      }
+      .vt323-regular {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body class="crt vt323-regular" onload="setTimeout(typeLine, 500)">
+  <div id="boot-container" class="hidden">
+    <div id="boot"></div>
+    <br>
+  </div>  
+  <div id="main">
+    <h>You should be redirected now</h>
+    <p>This might be because you have JavaScript disabeled.</p>
+    <p>If nothing happens press <a href="/home">here</a></p>
+  </div>
+  <script src="./boot.js"></script>
+</body>
 </html>
