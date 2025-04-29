@@ -17,7 +17,7 @@ Other than that, all interactions happen locally on your device. No cookies, no 
 
 ---
 
-> This project is still in the making. Feedback reuse are tottaly welcome!
+> This project is still in the making. Feedback and reuse are tottaly welcome!
 
 ---
 Made with ❤, :3, and stolen classified government documents.
