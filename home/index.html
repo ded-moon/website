@@ -38,14 +38,19 @@
     <style>
         html, body {
             margin: 0;
-            padding: 15px;
-            background-color: #151515;
+            height: 100%;
             font-family: monospace;
+            background-color: #151515;
+            color: white;
             font-size: 16px;
             line-height: 1.4;
-            overflow-x: hidden;
-            overflow-y: auto;
-            color: #ffffff;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            padding: 2%;
+            box-sizing: border-box;
         }
 
         /* For paragraphs */
@@ -103,30 +108,42 @@
             padding: 10px;
         }
 
-        .row {
+        .page-container {
+            flex: 1;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .row {
+            flex: 1;
+            min-height: 0;
+            display: flex;
             gap: 20px;
-            flex-wrap: wrap;
+            overflow: hidden;
         }
 
         .left-column {
-            width: 40%;
-            min-width: 300px;
+            width: 35%;
+            min-width: 200px;
+            max-width: 500px;
             font-size: 15px;
+
+            display: flex;
+            align-items: center;     /* Horizontal alignment (should already be centered by <center>) */
+            justify-content: center;
         }
 
         .right-column {
             flex: 1;
             display: flex;
             flex-direction: column;
-            min-width: 300px;
-            position: relative;
+            min-height: 0;
         }
 
         .terminal-log {
             flex-grow: 1;
-            max-height: 60vh;
+            min-height: 0;
             overflow-y: auto;
             overflow-x: hidden;
             white-space: pre-wrap;
@@ -193,33 +210,48 @@
             box-shadow: 0 0 4px #ffffff;
         }
 
+        @media (max-height: 600px)  {
+            .left-column{
+                font-size: 11px;
+            }
+        }
+
         @media (max-width: 780px) {
             body {
                 font-size: 13px;
-                padding: 0px;
+                padding: 15px;
+                overflow-x: hidden;
             }
             #cliForm {
                 display: none;
              }
-            .left-column {
-                width: 100%;
-                min-width: 100px;
+            .row {
+                flex-direction: column;
             }
+            .left-column,
             .right-column {
                 width: 100%;
-                min-width: 100px;
+                max-width: 100%;
+                min-width: 0;
+                box-sizing: border-box;
+            }
+            .left-column{
+                font-size: 8px;
+            }
+            .column {
+                padding: 10px;
             }
         }
         @media (max-width: 450px) {
             body {
                 font-size: 10px;
-                padding: 0px;
+                padding: 10px;
             }
         }
         @media (max-width: 350px) {
             body {
                 font-size: 8px;
-                padding: 0px;
+                padding: 5px;
             }
         }
     </style>
@@ -228,10 +260,11 @@
 <body class="crt">
     <h1 class="audiowide-regular" style="color: beige;">Home</h1>
     <p1 class="audiowide-regular" style="font-size: 20px; color:beige ;">VidraOs</p1>
-    <div class="row">
-        <div class="column left-column">
-            <center>
-                <pre style="color: rgb(34, 160, 135);"> 
+    <div class="page-container">
+        <div class="row">
+            <div class="column left-column">
+                <center>
+                    <pre style="color: rgb(34, 160, 135);"> 
     ⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀
@@ -252,24 +285,25 @@
     ⠀⠀⠀⠀⠀⠀⠈⢿⣿⣿⠛⣿⣿⡀⠀⠀⠀⠀⠀
     ⠀⠀⠀⠀⠀⠀⠀⢻⣿⡷⠀⠈⠿⣷⣄⣀⣀⣴⠆
     ⠀⠀⠀⠀⠀⢠⣾⣿⠿⠷⠀⠀⠀⠙⠿⠿⠛⠁⠀
-                </pre>
-            </center>
-        </div>
-        <div class="column right-column">
-            <div id="terminalLog" class="terminal-log vt323-regular"></div>
-            <form id="cliForm" class="terminal-input vt323-regular" onsubmit="handleCommand(event)">
-                <span>&gt;_</span>
-                <input id="command" type="text" autocomplete="off" autofocus/>
-            </form>
-        
-            <!-- Put overlay INSIDE the terminal! -->
-            <div id="overlay" style="display: none;">
-                <div id="overlayContent"></div>
-                <div id="returnButtonContainer" style="margin-top: 20px; display: none;">
-                    <button onclick="closeOverlay()">[ RETURN ]</button>
-                </div>
+                    </pre>
+                </center>
             </div>
-        </div>        
+            <div class="column right-column">
+                <div id="terminalLog" class="terminal-log vt323-regular"></div>
+                <form id="cliForm" class="terminal-input vt323-regular" onsubmit="handleCommand(event)">
+                    <span>&gt;_</span>
+                    <input id="command" type="text" autocomplete="off" autofocus/>
+                </form>
+            
+                <!-- Put overlay INSIDE the terminal! -->
+                <div id="overlay" style="display: none;">
+                    <div id="overlayContent"></div>
+                    <div id="returnButtonContainer" style="margin-top: 20px; display: none;">
+                        <button onclick="closeOverlay()">[ RETURN ]</button>
+                    </div>
+                </div>
+            </div>        
+        </div>
     </div>
 
     <div id="blinkOverlay"></div>
