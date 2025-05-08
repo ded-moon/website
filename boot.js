@@ -68,7 +68,7 @@ const bootText = [
       bootContainer.scrollTop = bootContainer.scrollHeight;
   
       // Delay logic
-      const delay = Math.random() * 600 + 200;
+      const delay = Math.random() * 500 + 100;
       const needsOK = [
         "Checking memory...",
         "Mounting file system...",
@@ -87,8 +87,8 @@ const bootText = [
           setTimeout(() => {
             lineIndex++;
             typeLine();
-          }, 300); // short delay before next line
-        }, 1000); // delay for [OK]
+          }, 200); // short delay before next line
+        }, 900); // delay for [OK]
       } else {
         setTimeout(() => {
           line.classList.remove("cursor");
