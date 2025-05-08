@@ -47,7 +47,7 @@ const commands = {
     user_agent: "uname",
     weather: "weather",
     time: "time",
-    now: "weather"
+    now: "time"
 };
 
 const helpList = [
@@ -59,7 +59,6 @@ const helpList = [
     "archive",
     "reload",
     "help",
-    "home"
 ];
 
 function getWeatherDescription(code) {
