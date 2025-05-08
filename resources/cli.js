@@ -6,7 +6,7 @@ const commands = {
     projects_list: "load-projects",
     posts: "load-posts",
     contact: "/resources/data/pages/contact.html",
-    social: "/resources/data/pages/about.html",
+    social: "/resources/data/pages/contact.html",
     other: "./other",
     archive: "/resources/archived_resources/",
     clear: "clear",
