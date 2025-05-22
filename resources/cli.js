@@ -8,6 +8,8 @@ const commands = {
     contact: "/resources/data/pages/contact.html",
     social: "/resources/data/pages/contact.html",
     other: "./other",
+    spicyvoltage: "./other",
+    spicy_voltage: "./other",
     archive: "/resources/archived_resources/",
     clear: "clear",
     reload: "reload",
@@ -58,6 +60,10 @@ const helpList = [
     "contact",
     "other",
     "archive",
+    "code",
+    "weather",
+    "time",
+    "uname",
     "reload",
     "help",
 ];
@@ -268,7 +274,7 @@ function handleCommand(e) {
                 appendTextLine("It stares back at you.");
             }, 2000);
         } else if (action === "git") {
-            appendTextLine("Link to this website's github page: https://github.com/ded-moon/website");
+            appendHTMLLine(`Link to this website's github page: <a href="https://github.com/ded-moon/website" class="cli-link" target="_blank" rel="noopener noreferrer">https://github.com/ded-moon/website</a>`);
         } else {
             if (action === "/resources/data/pages/about.html" || action === "/resources/data/pages/contact.html" || action === "/resources/data/pages/about.html") {
                 // Light page => fetch and show in terminal
