@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="language" content="en">
+    <meta name="referrer" content="origin">
+    <meta name="robots" content="index, follow">
+
+    <!-- Security tags-->
     <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self' 'unsafe-inline';
@@ -14,29 +22,48 @@
 
     <!-- For search engines -->
     <link rel="canonical" href="https://dedmoon.com/home">
-    <meta name="keywords" content="ded_moon, dedmoon, SpicyVoltage, robotics, programming, hackathons, CTF, engineering, romanian tech, ">
+    <meta name="keywords"
+        content="ded_moon, dedmoon, SpicyVoltage, robotics, programming, hackathons, CTF, engineering, romanian tech, ">
+
     <!-- For internet explorer XD -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dedmoon.com/home">
     <meta property="og:site_name" content="dedmoon.com">
-    <meta property="og:title" content="ded_moon">
-    <meta name="description" content="ded_moon's presonal website">
-    <meta property="og:description" content="ded_moon's presonal website" />
-    <meta name="theme-color" content="#068172">
+    <meta property="og:title" content="ded_moon's personal website">
+    <meta property="og:description"
+        content="Hi, I’m ded_moon — Romanian tinkerer, furry, and aspiring engineer. I build stuff, break stuff, hike mountains, and map the world." />
+    <meta name="twitter:image" content="/resources/banner.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="dedmoon.com">
+    <meta property="twitter:url" content="https://dedmoon.com">
+    <meta name="twitter:title" content="ded_moon's personal website">
+    <meta name="twitter:description"
+        content="Hi, I’m ded_moon — Romanian tinkerer, furry, and aspiring engineer. I build stuff, break stuff, hike mountains, and map the world.">
+    <meta name="twitter:image" content="/resources/banner.jpg">
+
+
+    <!-- HTML Meta Tags -->
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
+    <title>Home</title>
+    <meta name="description"
+        content="Hi, I’m ded_moon — Romanian tinkerer, furry, and aspiring engineer. I build stuff, break stuff, hike mountains, and map the world." ">
+    <meta name=" theme-color" content="#05c4ae">
     <meta name="author" content="ded_moon" />
+
 
     <link rel="stylesheet" href=/resources/crt.css>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&display=swap" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
-    <title>Home</title>
-
     <style>
-        html, body {
+        html,
+        body {
             margin: 0;
             height: 100%;
             font-family: monospace;
@@ -60,6 +87,7 @@
             font-size: 20px;
             font-style: normal;
         }
+
         /* For headers */
         .audiowide-regular {
             font-family: "Audiowide", sans-serif;
@@ -68,7 +96,7 @@
             text-shadow: 1px 1px gray;
         }
 
-        p1{
+        p1 {
             color: #ffffff;
         }
 
@@ -103,9 +131,9 @@
         .column {
             /* Remove overflow: hidden */
             border: 1px solid rgb(34, 160, 135);
-            box-shadow: 0 0 2px rgba(34,160,135,0.6),
-                        0 0 5px rgba(34,160,135,0.4),
-                        0 0 10px rgba(34,160,135,0.2);
+            box-shadow: 0 0 2px rgba(34, 160, 135, 0.6),
+                0 0 5px rgba(34, 160, 135, 0.4),
+                0 0 10px rgba(34, 160, 135, 0.2);
             padding: 10px;
         }
 
@@ -131,7 +159,8 @@
             font-size: 15px;
 
             display: flex;
-            align-items: center;     /* Horizontal alignment (should already be centered by <center>) */
+            align-items: center;
+            /* Horizontal alignment (should already be centered by <center>) */
             justify-content: center;
         }
 
@@ -170,18 +199,22 @@
             flex-grow: 1;
             margin-left: 8px;
         }
+
         .cli-link {
             color: turquoise;
             text-decoration: none;
         }
+
         .cli-link:hover {
             text-decoration: underline;
         }
+
         .cli-action-link {
             color: turquoise;
             cursor: pointer;
             text-decoration: none;
         }
+
         .cli-action-link:hover {
             text-decoration: underline;
         }
@@ -194,18 +227,35 @@
             height: 100%;
             background-image: url('/resources/pictures/stars.png');
             background-size: cover;
-            background-repeat:no-repeat;
+            background-repeat: no-repeat;
             background-position: center;
             opacity: 0;
             pointer-events: none;
-            z-index: 1;  
+            z-index: 1;
             animation: none;
         }
 
         @keyframes blinkEffect {
-            0%, 100% { opacity: 0; }
-            10%, 30%, 50%, 70%, 90% { opacity: 1; }
-            20%, 40%, 60%, 80% { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                opacity: 1;
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                opacity: 0;
+            }
         }
 
 
@@ -213,8 +263,8 @@
             box-shadow: 0 0 4px #ffffff;
         }
 
-        @media (max-height: 600px)  {
-            .left-column{
+        @media (max-height: 600px) {
+            .left-column {
                 font-size: 11px;
             }
         }
@@ -225,12 +275,15 @@
                 padding: 15px;
                 overflow-x: hidden;
             }
+
             #cliForm {
                 display: none;
-             }
+            }
+
             .row {
                 flex-direction: column;
             }
+
             .left-column,
             .right-column {
                 width: 100%;
@@ -238,19 +291,23 @@
                 min-width: 0;
                 box-sizing: border-box;
             }
-            .left-column{
+
+            .left-column {
                 font-size: 8px;
             }
+
             .column {
                 padding: 10px;
             }
         }
+
         @media (max-width: 450px) {
             body {
                 font-size: 10px;
                 padding: 10px;
             }
         }
+
         @media (max-width: 350px) {
             body {
                 font-size: 8px;
@@ -267,7 +324,7 @@
         <div class="row">
             <div class="column left-column">
                 <center>
-                    <pre style="color: rgb(34, 160, 135);"> 
+                    <pre style="color: rgb(34, 160, 135);">
     ⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠀⣠⣴⣾⣿⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀
@@ -295,9 +352,9 @@
                 <div id="terminalLog" class="terminal-log vt323-regular"></div>
                 <form id="cliForm" class="terminal-input vt323-regular" onsubmit="handleCommand(event)">
                     <span>&gt;_</span>
-                    <input id="command" type="text" autocomplete="off" autofocus/>
+                    <input id="command" type="text" autocomplete="off" autofocus />
                 </form>
-            
+
                 <!-- Put overlay INSIDE the terminal! -->
                 <div id="overlay" style="display: none;">
                     <div id="overlayContent"></div>
@@ -305,7 +362,7 @@
                         <button onclick="closeOverlay()">[ RETURN ]</button>
                     </div>
                 </div>
-            </div>        
+            </div>
         </div>
     </div>
 
@@ -313,4 +370,5 @@
 
     <script src="/resources/cli.js"></script>
 </body>
+
 </html>

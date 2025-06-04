@@ -1,38 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="language" content="en">
+    <meta name="referrer" content="origin">
+    <meta name="robots" content="index, follow">
+
+    <!-- Security tags-->
     <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     <meta http-equiv="Content-Security-Policy" content="
         default-src 'self';
         script-src 'self' 'unsafe-inline';
         style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
         font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self' https://api.open-meteo.com https://ipapi.co;
         object-src 'none';">
 
     <!-- For search engines -->
     <link rel="canonical" href="https://dedmoon.com/home">
-    <meta name="keywords" content="ded_moon, dedmoon, SpicyVoltage, robotics, programming, cybersecurity, hackathons, CTF, engineering, romanian tech, ">
+
     <!-- For internet explorer XD -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://dedmoon.com/home">
     <meta property="og:site_name" content="dedmoon.com">
-    <meta property="og:title" content="ded_moon">
-    <meta name="description" content="ded_moon's presonal website">
-    <meta property="og:description" content="ded_moon's presonal website" />
-    <meta name="theme-color" content="#068172">
+    <meta property="og:title" content="ded_moon's personal website">
+    <meta property="og:description" content="Error 404. Page not found" />
+    <meta name="twitter:image" content="/resources/banner.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="dedmoon.com">
+    <meta property="twitter:url" content="https://dedmoon.com">
+    <meta name="twitter:title" content="ded_moon's personal website">
+    <meta name="twitter:description" content="Error 404. Page not found">
+    <meta name="twitter:image" content="/resources/banner.jpg">
+
+
+    <!-- HTML Meta Tags -->
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/favicon.ico">
+    <title>Error</title>
+    <meta name="description" content="Error 404. Page not found">
+    <meta name="theme-color" content="#05c4ae">
     <meta name="author" content="ded_moon" />
+
 
     <link rel="stylesheet" href=/resources/crt.css>
 
-    <link rel="shortcut icon" type="image/x-icon" href="./resources/favicon.ico">
-    <title>404 Not Found</title>
-
     <style>
-        html, body {
+        html,
+        body {
             margin: 0;
             padding: 30px;
             background-color: #0c0c0c;
@@ -42,25 +65,31 @@
             line-height: 1.4;
             overflow: hidden;
         }
-    
+
         .cursor::after {
-          content: '▍';
-          display: inline-block;
-          animation: blink 1s step-end infinite;
-          margin-left: 5px;
+            content: '▍';
+            display: inline-block;
+            animation: blink 1s step-end infinite;
+            margin-left: 5px;
         }
-    
+
         @keyframes blink {
-          50% { opacity: 0; }
-        } 
-    
-        a {
-          color: #00FF00;
+            50% {
+                opacity: 0;
+            }
         }
+
+        a {
+            color: #00FF00;
+        }
+
         pre {
-            white-space: pre-wrap;     /* allows wrapping */
-            word-break: break-word;    /* breaks words at boundary */
-            overflow-wrap: break-word; /* older browser support */
+            white-space: pre-wrap;
+            /* allows wrapping */
+            word-break: break-word;
+            /* breaks words at boundary */
+            overflow-wrap: break-word;
+            /* older browser support */
         }
 
 
@@ -70,12 +99,14 @@
                 padding: 0px;
             }
         }
+
         @media (max-width: 450px) {
             body {
                 font-size: 10px;
                 padding: 0px;
             }
         }
+
         @media (max-width: 350px) {
             body {
                 font-size: 8px;
@@ -101,13 +132,14 @@
     --------------------------------------------------
     [ <a href="/home">Press here to return to the main interface</a> ]<span class="cursor"></span>
     </pre>
-    
+
     <script>
-      document.getElementById("timestamp").textContent = new Date().toLocaleString();
-      if (window.location.pathname.includes("admin")) { //hehe
-        document.getElementById("messsageDisplay").textContent = "Admin access denied. Session information logged.";
-    }
+        document.getElementById("timestamp").textContent = new Date().toLocaleString();
+        if (window.location.pathname.includes("admin")) { //hehe
+            document.getElementById("messsageDisplay").textContent = "Admin access denied. Session information logged.";
+        }
     </script>
-    <script src="/404.js"></script> 
+    <script src="/404.js"></script>
 </body>
+
 </html>
