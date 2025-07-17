@@ -13,7 +13,7 @@ This site does not collect or store any personal information (duh).
 
 For the weather feature, your approximate location (based on IP address) is temporarily retrieved using the external service ipapi.co. This information is used only to display the local weather and is not stored by this site. 
 
-Other than that, all interactions happen locally on your device. No cookies, no analytics, no ads (that would be absurd for a small site like this).
+Other than that, all interactions happen locally on your device. No cookies, no analytics, no ads (not everything needs to spy on you).
 
 ---
 
