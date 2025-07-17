@@ -152,11 +152,8 @@
         }
 
         .left-column {
-            width: 35%;
-            min-width: 200px;
-            max-width: 500px;
+            min-width: 45%;
             font-size: 15px;
-
             display: flex;
             align-items: center;
             /* Horizontal alignment (should already be centered by <center>) */
@@ -320,8 +317,9 @@
     <h1 class="audiowide-regular" style="color: beige;">Home</h1>
     <p1 class="audiowide-regular" style="font-size: 20px; color:beige ;">VidraOS</p1>
     <div class="page-container">
+
         <div class="row">
-            <div class="column left-column">
+            <div class="column left-column" style="position: relative;">
                 <center>
                     <pre style="color: rgb(34, 160, 135);">
     ⠀⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -346,15 +344,7 @@
     ⠀⠀⠀⠀⠀⢠⣾⣿⠿⠷⠀⠀⠀⠙⠿⠿⠛⠁⠀
                     </pre>
                 </center>
-            </div>
-            <div class="column right-column">
-                <div id="terminalLog" class="terminal-log vt323-regular"></div>
-                <form id="cliForm" class="terminal-input vt323-regular" onsubmit="handleCommand(event)">
-                    <span>&gt;_</span>
-                    <input id="command" type="text" autocomplete="off" autofocus />
-                </form>
 
-                <!-- Put overlay INSIDE the terminal! -->
                 <div id="overlay" style="display: none;">
                     <div id="overlayContent"></div>
                     <div id="returnButtonContainer" style="margin-top: 20px; display: none;">
@@ -362,7 +352,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="column right-column">
+                <div id="terminalLog" class="terminal-log vt323-regular"></div>
+                <form id="cliForm" class="terminal-input vt323-regular" onsubmit="handleCommand(event)">
+                    <span>&gt;_</span>
+                    <input id="command" type="text" autocomplete="off" autofocus />
+                </form>
+            </div>
         </div>
+
     </div>
 
     <div id="blinkOverlay"></div>
