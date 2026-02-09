@@ -1,40 +1,61 @@
 const bootText = [
-    "ObscurWare BIOS - Build 13.37.Δ",
-    "Developed by Transylvanian Systems S.R.L.",
-    "© 1984–2005 Institutul Tehnologic de Calcul ",
-    "Performing Power-On Self-Test (POST)...",
+    "ObscurWare BIOS Version 1.14",
+    "Copyright (C) 1989–1994 Transylvanian Systems S.R.L",
+    "All Rights Reserved",
+    " ",
     "System Manufacturer: Project Vidra.",
     "Model: DeskPro 386/25e",
-    " ",  
+    " ",
+    "Performing Power-On Self-Test (POST)...",  
     "CPU: Intel 80386DX @ 33MHz",
-    "RAM: 6144KB [STABLE]",
+    "Math Coprocessor: 80387 Present",
+    "Memory: 6144KB ",
+    " ",
     "Keyboard: Detected",
-    "Mouse: Not Found",
-    "Primary Master: 540MB IDE HDD",
+    "Pointing Device: Not Installed",
+    " ",
+    "Primary Master: 540MB IDE Hard Disk",
     "Primary Slave: None",
     "Secondary Master: CD-ROM Drive 2X",
-    "Boot device: A:\\ Floppy Drive",
+    "Secondary Slave: None",
     " ",
+    "CMOS Checksum: [OK] (defaults loaded)",
+    "BIOS ROM Shadowing: Enabled",
+    "Boot Sequence: A:, C:",
+    "Booting from A:\\",
+    " ",
+    "Loading bootstrap loader...",
     "Initializing system...",
-    "Detecting hardware components...",
+    " ",
+    "Relocating system tables...",
+    "Switching to protected mode...",
+    "Detecting hardware configuration...",
     "Loading kernel...",
     "Checking memory...",
     "Mounting file system...",
     "Verifying disk integrity...",
     "WARNING: Disk sector 3452 unreadable, recovery failed.",
-    "All devices initialized successfully.",
+    "WARNING: Marking sector as bad.",
+    "System initialization complete.",
+    " ",
     "Initializing network interfaces...",
-    "Establishing secure channel with central node...",
-    "Network connection established.",
+    "Synchronizing with network host...",
+    "System clock updated.",
+    "Network interface established.",
+    " ",
     "Starting system services...",
     "Verifying system integrity...",
+    "Reference state: 11/12/1993",
     "No unauthorized modifications detected.",
-    "Applying pending security patches...",
+    "Note: Configuration differs from installation record.",
+    "Updating system components...",
+    "Enabling legacy compatibility mode...",
     "Loading user configuration...",
     "Setting up user environment...",
+    "Note: One or more warnings were issued during startup.",
     "Finalizing setup...",
     " ",
-    "Boot complete. Welcome!"
+    "System ready.",
   ];
 
 
@@ -56,10 +77,13 @@ const bootText = [
   
       line.textContent = text;
   
-      // Style if warning
+      // Color adjustments 
       if (text.includes("WARNING")) {
-        line.classList.add("error");
+        line.classList.add("error_red");
       } 
+      else if (text.includes("Reference") || text.includes("Note:")) {
+        line.classList.add("error_yellow");
+      }
   
       line.classList.add("cursor");
       bootDiv.appendChild(line);
