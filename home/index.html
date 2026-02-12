@@ -199,19 +199,10 @@
         .cli-link {
             color: turquoise;
             text-decoration: none;
+            cursor: pointer;
         }
 
         .cli-link:hover {
-            text-decoration: underline;
-        }
-
-        .cli-action-link {
-            color: turquoise;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .cli-action-link:hover {
             text-decoration: underline;
         }
 
@@ -270,10 +261,6 @@
                 font-size: 13px;
                 padding: 15px;
                 overflow-x: hidden;
-            }
-
-            #cliForm {
-                display: none;
             }
 
             .row {
@@ -355,10 +342,10 @@
 
             <div class="column right-column">
                 <div id="terminalLog" class="terminal-log vt323-regular"></div>
-                <form id="cliForm" class="terminal-input vt323-regular" onsubmit="handleCommand(event)">
-                    <span>&gt;_</span>
+                <div id="cliInput" class="terminal-input vt323-regular">
+                    <span id="prompt">&gt;_</span>
                     <input id="command" type="text" autocomplete="off" autofocus />
-                </form>
+                </div>
             </div>
         </div>
 
@@ -366,7 +353,20 @@
 
     <div id="blinkOverlay"></div>
 
-    <script src="/resources/cli.js"></script>
+    <!-- Load shell -->
+    <script type="module">
+        import { Terminal } from "/resources/cli.js";
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const log = document.getElementById("terminalLog");
+            const input = document.getElementById("command");
+
+            const term = new Terminal(log, input);
+
+            term.executeLine("home");
+        });
+    </script>
+
 </body>
 
 </html>
