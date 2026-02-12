@@ -161,9 +161,9 @@ function handleCommand(e) {
             });
         } else if (action === "home") {
             const now = new Date();
-            appendTextLine("Welcome to my little website");
+            appendTextLine("Welcome.");
             appendTextLine("Current time: " + now.toLocaleString());
-            appendTextLine("\nThis site is a collection of my personal work, experiments, and thoughts about tech, robotics etc.\n");
+            appendTextLine("\nThis is my personal website, containing a collection of my work, experiments, and thoughts about tech, robotics etc.\n");
 
             helpList.forEach(cmd => {
                 const action = commands[cmd];
