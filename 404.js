@@ -49,7 +49,14 @@ var messages = [
     'Tf is Project Vidra?'
 ]
 function newMessage() {
+        if (window.location.pathname.includes("admin")) { //hehe
+            document.getElementById("messageDisplay").textContent = "Admin access denied. Session information logged.";
+        }
+        else {
         var randomNumber = Math.floor(Math.random() * (messages.length));
-        document.getElementById('messsageDisplay').innerHTML = messages[randomNumber];
+        document.getElementById('messageDisplay').innerHTML = messages[randomNumber];
+        }
+
+        document.getElementById("timestamp").textContent = new Date().toLocaleString();
         document.getElementById("sessionID").textContent =  'R' + randomNumber + '_' + Math.random().toString(36).substr(2, 8).toUpperCase();
 }

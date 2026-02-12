@@ -128,17 +128,11 @@
     > System log: /var/log/vidraos/404.err
     > Timestamp: <span id="timestamp"></span>
     
-    > sys/msg: <span id="messsageDisplay"></span>
+    > sys/msg: <span id="messageDisplay"></span>
     --------------------------------------------------
     [ <a href="/home">Press here to return to the main interface</a> ]<span class="cursor"></span>
     </pre>
 
-    <script>
-        document.getElementById("timestamp").textContent = new Date().toLocaleString();
-        if (window.location.pathname.includes("admin")) { //hehe
-            document.getElementById("messsageDisplay").textContent = "Admin access denied. Session information logged.";
-        }
-    </script>
     <script src="/404.js"></script>
 </body>
 
