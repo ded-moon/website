@@ -26,6 +26,9 @@ function getWeatherDescription(code) {
     return weatherCodes[code] || "Unknown weather condition";
 }
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 ///
 export const commands = {
@@ -177,6 +180,25 @@ export const commands = {
       visible: true,
       async execute(term) {
         term.print(new Date().toLocaleString());
+      }
+    },
+
+    restart: {
+      description: "Restarts the system",
+      visible: true,
+      aliases: ["reboot","stop","shutdown"],
+      async execute(term) {
+        term.executeLine("clear");
+        term.print("Shutting down");
+        for (let i = 0; i < 3; i++) {
+          await sleep(500);
+          term.append(".");
+        }
+
+        await sleep(2000);
+        term.executeLine("clear");
+        await sleep(20);
+        window.location.href = "/"; // redirect same tab
       }
     },
 

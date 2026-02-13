@@ -27,6 +27,19 @@ export class Terminal {
         this.scroll();
     }
 
+    append(text = "") {
+      let last = this.log.lastElementChild;
+
+      if (!last) {
+          last = document.createElement("div");
+          this.log.appendChild(last);
+      }
+
+      last.textContent += text;
+      this.scroll();
+    }
+
+
     printHTML(html) {
         const line = document.createElement("div");
         line.innerHTML = html;
