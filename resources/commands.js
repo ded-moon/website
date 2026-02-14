@@ -72,6 +72,10 @@ export const commands = {
                     term.printClickable(name, cmd.description);
                 });
             term.print(" ");
+
+            term.c_loc = "/home";
+            const terminal = document.getElementById("terminalLog");
+            terminal.scrollTop = 0;
         }
     },
 
@@ -183,23 +187,37 @@ export const commands = {
       }
     },
 
-    restart: {
-      description: "Restarts the system",
-      visible: true,
-      aliases: ["reboot","stop","shutdown"],
-      async execute(term) {
-        term.executeLine("clear");
-        term.print("Shutting down");
-        for (let i = 0; i < 3; i++) {
-          await sleep(500);
-          term.append(".");
+    uname: {
+        description: "Prints the signature of the connected node.",
+        visible: true,
+        async execute(term){
+            let agent = navigator.userAgent;
+            term.print("reading incoming signature");
+            for (let i = 0; i < 3; i++) {
+                await sleep(500);
+                term.append(".");
+            }
+            await sleep(500);
+            term.print("node recognized:");    
+            term.print(agent);
         }
+    },
 
-        await sleep(2000);
-        term.executeLine("clear");
-        await sleep(20);
-        window.location.href = "/"; // redirect same tab
-      }
+    hostid: {
+        description: "Prints the signature of the host node.",
+        visible: true,
+        async execute(term){
+            term.print("reading incoming signature");
+        }
+    },
+
+    source_code: {
+        description: "Provides a link to this machine's cource code",
+        visible: true,
+        async execute(term){
+            term.print("Link to this machine's GitHub repository:");
+            term.printHTML(`<a href="https://github.com/ded-moon/website" class="cli-link" target="_blank" rel="noopener noreferrer">https://github.com/ded-moon/website</a>`);
+        }
     },
 
     weather: {
@@ -236,7 +254,39 @@ export const commands = {
                     term.print("An error occurred while fetching your location.");
                 });
       }
-    }
+    },
 
+    restart: {
+      description: "Restarts the system",
+      visible: true,
+      aliases: ["reboot","stop","shutdown"],
+      async execute(term) {
+        term.executeLine("clear");
+        term.print("Shutting down");
+        for (let i = 0; i < 3; i++) {
+          await sleep(500);
+          term.append(".");
+        }
+
+        await sleep(2000);
+        term.executeLine("clear");
+        await sleep(20);
+        window.location.href = "/"; // redirect same tab
+      }
+    },
+
+    blink: {
+        description: " ",
+        visible: false,
+        async execute(term) {
+            
+            const overlay = document.getElementById("blinkOverlay");
+            term.print("The universe is blinking");
+            overlay.style.animation = "blinkEffect 2s ease-in-out";
+            await sleep(1500);
+            overlay.style.animation = "none";
+            overlay.style.opacity = 0;
+        }
+    }
 
 };

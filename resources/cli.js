@@ -27,6 +27,12 @@ export class Terminal {
         this.scroll();
     }
 
+    printHTML(html) {
+        const line = document.createElement("div");
+        line.innerHTML = html;
+        this.container.appendChild(line);
+    }
+
     append(text = "") {
       let last = this.log.lastElementChild;
 
