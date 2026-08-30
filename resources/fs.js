@@ -1,5 +1,4 @@
 // fs.js
-// this might get out of hand
 
 export const fileSystem = {
     "/": {
@@ -24,7 +23,12 @@ export const fileSystem = {
                             "placeholder.txt": {  
                                 type: "file",
                                 contentType: "text",
-                                content: "this is a placeholder"
+                                content: "this is a placeholder. More content will be added in the future."
+                            },
+                            "project.txt": {  
+                                type: "file",
+                                contentType: "html",
+                                content: "projects.html"
                             }
                         }
                     }
