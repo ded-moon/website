@@ -59,10 +59,12 @@ export const commands = {
         async execute(term) {
             term.executeLine("clear");
             const now = new Date();
+            const time = now.toLocaleTimeString("en-GB");
+            const date = now.toLocaleDateString("en-GB");
 
             term.print("Welcome - I'm ded_moon.");
             term.print(" ");
-            term.print("Current time is: " + now.toLocaleString());
+            term.print("Current time is: " + `${time} - ${date}`);
             term.print("This system hosts a collection of my work, experiments, and notes.");
             term.print(" ");
 
@@ -183,7 +185,10 @@ export const commands = {
       description: "Displays system time",
       visible: true,
       async execute(term) {
-        term.print(new Date().toLocaleString());
+        const now = new Date();
+        const time = now.toLocaleTimeString("en-GB");
+        const date = now.toLocaleDateString("en-GB");
+        term.print(`${time} - ${date}`);
       }
     },
 
