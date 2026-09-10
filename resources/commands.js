@@ -66,7 +66,7 @@ export const commands = {
             term.print(" ");
             term.print("Current time is: " + `${time} - ${date}`);
             term.print("This system hosts a collection of my work, experiments, and notes.");
-            term.print(" ");
+            term.print("Navigate by typing commands into this terminal: ");
 
             Object.entries(commands)
                 .filter(([name, cmd]) => cmd.visible !== false && name !== "home")
@@ -87,24 +87,6 @@ export const commands = {
         visible: false,
         async execute(term) {
             term.clear();
-        }
-    },
-
-    about: {
-        description: "Enter \"about me\" page",
-        visible: true,
-        aliases: ["about_me", "me", "ded_moon"],
-        async execute(term) {
-            await term.openPage("/resources/data/pages/about.html");
-        }
-    },
-
-    contact: {
-        description: "Enter \"contacts\" page",
-        visible: true,
-        aliases: ["social", "socials"],
-        async execute(term) {
-            await term.openPage("/resources/data/pages/contact.html");
         }
     },
 
