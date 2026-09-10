@@ -52,6 +52,9 @@
 
 
     <link rel="stylesheet" href=/resources/crt.css>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&family=Workbench&display=swap" rel="stylesheet">
 
     <style>
         html,
@@ -64,6 +67,22 @@
             font-size: 16px;
             line-height: 1.4;
             overflow: hidden;
+        }
+
+        .vt323-regular {
+            font-family: "VT323", monospace;
+            font-weight: 100;
+            font-size: 20px;
+            font-style: normal;
+        }
+        .workbench-header {
+            font-family: "Workbench", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "BLED" 0,
+                "SCAN" 0;
         }
 
         .cursor::after {
@@ -85,11 +104,8 @@
 
         pre {
             white-space: pre-wrap;
-            /* allows wrapping */
             word-break: break-word;
-            /* breaks words at boundary */
             overflow-wrap: break-word;
-            /* older browser support */
         }
 
 
@@ -117,8 +133,8 @@
 </head>
 
 <body onload="newMessage()" class="crt">
-    <pre>
-    VidraOS Recovery Console 4.03
+    <pre class="vt323-regular high_contrast">
+    <p1 class="workbench-header" style="font-size: 25px;">VidraOS Recovery Console 4.03</p1>
     --------------------------------------------------
     > ERROR 404: Resource not found
     > The requested file could not be located on this node.
