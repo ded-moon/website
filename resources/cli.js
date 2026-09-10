@@ -1,8 +1,5 @@
 // cli.js  lord have mercy
 
-///TO DO: add the rest of the old commands
-//        complete the filesystem structure
-
 import { commands } from "./commands.js";
 import { fileSystem } from "./fs.js";
 

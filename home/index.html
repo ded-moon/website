@@ -58,7 +58,7 @@
     <link rel="stylesheet" href=/resources/crt.css>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&family=Workbench&display=swap" rel="stylesheet">
 
     <style>
         html,
@@ -80,10 +80,11 @@
         }
 
         /* For paragraphs */
+
         .vt323-regular {
             font-family: "VT323", monospace;
-            font-weight: 400;
-            font-size: 20px;
+            font-weight: 100;
+            font-size: 23px;
             font-style: normal;
         }
 
@@ -93,6 +94,15 @@
             font-weight: 400;
             font-style: normal;
             text-shadow: 1px 1px gray;
+        }
+        .workbench-header {
+            font-family: "Workbench", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+            font-variation-settings:
+                "BLED" 0,
+                "SCAN" 0;
         }
 
         p1 {
@@ -276,11 +286,15 @@
             }
 
             .left-column {
-                font-size: 8px;
+                font-size: 10px;
             }
 
             .column {
                 padding: 10px;
+            }
+
+            .vt323-regular {
+                font-size: 21px;
             }
         }
 
@@ -301,8 +315,7 @@
 </head>
 
 <body class="crt">
-    <h1 class="audiowide-regular" style="color: beige;">Home</h1>
-    <p1 class="audiowide-regular" style="font-size: 20px; color:beige ;">VidraOS</p1>
+    <p1 class="workbench-header" style="font-size: 20px; color:beige ;">VidraOS</p1>
     <div class="page-container">
 
         <div class="row">
